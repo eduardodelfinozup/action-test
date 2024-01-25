@@ -41,16 +41,15 @@ spec:
       linux: |  
         git add .
         git commit -m "{{message}}"        
-        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}} 
-        git push origin {{branch_name}}
+        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  {{name_branch}} 
       mac: |
         git add .
         git commit -m "{{message}}"       
-        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  
+        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  {{name_branch}} 
       windows: |
         git add .
         git commit -m "{{message}}"        
-        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}} 
+        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  {{name_branch}}  
          
         
       
