@@ -38,20 +38,19 @@ spec:
             git --version
         info: "Git not installed"    
     script:
-      linux: |   
-        git config --global user.name "eduardodelfinozup"
-        git config --global user.email "eduardo.delfino@zup.com.br"       
+      linux: |  
         git add .
-        git commit -m "{{message}}"
-        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}} {{name_branch}} 
+        git commit -m "{{message}}"        
+        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  {{name_branch}} 
+        git push origin {{name_branch}}
       mac: |
         git add .
-        git commit -m "{{message}}"
-        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}} {{name_branch}}
+        git commit -m "{{message}}"       
+        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}} 
       windows: |
         git add .
-        git commit -m "{{message}}"
-        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}} {{name_branch}}
+        git commit -m "{{message}}"        
+        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}} 
          
         
       
