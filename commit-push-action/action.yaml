@@ -22,10 +22,7 @@ spec:
       type: text
     - label: Commit message
       name: message
-      type: text  
-    - label: Branch
-      name: branch_name
-      type: text    
+      type: text 
   shell:
     workdir: .
     requirements-check:
