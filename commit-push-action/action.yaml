@@ -40,17 +40,17 @@ spec:
     script:
       linux: |  
         git add .
-        git commit -m "{{message}}"
-        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  {{name_branch}} 
+        git commit -m "{{message}}"               
+        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}}         
       mac: |
         git add .
-        git commit -m "{{message}}"  
-        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  {{name_branch}}  
+        git commit -m "{{message}}" 
+        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}} 
       windows: |
         git add .
         git commit -m "{{message}}" 
-        git push --set-upstream https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  {{name_branch}}        
-        
+        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}} 
+       
          
         
       
