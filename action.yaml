@@ -22,6 +22,9 @@ spec:
       type: text
     - label: Commit message
       name: message
+      type: text  
+    - label: Branch
+      name: branch_name
       type: text    
   shell:
     workdir: .
@@ -38,7 +41,8 @@ spec:
       linux: |  
         git add .
         git commit -m "{{message}}"        
-        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}}
+        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}} 
+        git push origin {{branch_name}}
       mac: |
         git add .
         git commit -m "{{message}}"       
@@ -46,7 +50,7 @@ spec:
       windows: |
         git add .
         git commit -m "{{message}}"        
-        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}}  
+        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}} 
          
         
       
