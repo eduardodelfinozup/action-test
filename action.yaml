@@ -10,18 +10,12 @@ spec:
   docs:
     pt-br: docs/pt-br/docs.md
     en-us: docs/en-us/docs.md
-  inputs:
-    - label: Personal Access Token
-      name: pat
-      type: password
-    - label: Organization Name
-      name: org_name
-      type: text
-    - label: Repository Name
-      name: repo_name
-      type: text
+  inputs: 
     - label: Commit message
       name: message
+      type: text
+    - label: Nome da Branch
+      name: name_branch
       type: text
   shell:
     workdir: .
@@ -35,5 +29,6 @@ spec:
       linux: |
         git add .
         git commit -m "{{message}}"
-        git push https://{{pat}}@github.com/{{org_name}}/{{repo_name}}
+        git push origin {{name_branch}} 
+        
       
